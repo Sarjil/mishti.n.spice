@@ -5,3 +5,8 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+require 'open-uri'
+
+User.destroy_all
+
+sambam = User.create!(username:"sambam", email:"schowdh143@gmail.com", password: "Ilovefood143")
