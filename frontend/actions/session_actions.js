@@ -9,18 +9,18 @@ export const receiveCurrentUser = user => ({
     user
 })
 
-export const logoutCurrentUser = user => ({
+export const logoutCurrentUser = () => ({
     type: LOGOUT_CURRENT_USER
 })
 
-export const login => user => dispatch => {
+export const login = (user) => (dispatch) => {
     return SessionApiUtil.login(user).then(user => dispatch(receiveCurrentUser(user)))
 }
 
-export const logout => () => dispatch => {
+export const logout = () => dispatch => {
     return SessionApiUtil.logout().then(() => dispatch(logoutCurrentUser))
 }
 
-export const signUp => user => dispatch => {
+export const signUp = user => dispatch => {
     return SessionApiUtil.signup(user).then(user => dispatch(receiveCurrentUser(user)))
 }
