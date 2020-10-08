@@ -1,4 +1,5 @@
 import React from 'react'
+import Header from './header'
 
 class Homepage extends React.Component{
     constructor(props){
@@ -8,7 +9,7 @@ class Homepage extends React.Component{
     render(){
         return(
             <div>
-                Welcome to Mishti N Spice
+                <Header /> 
             </div>
         )
     }
