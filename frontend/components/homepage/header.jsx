@@ -1,9 +1,10 @@
 import React from 'react';
+import Navbar from './navbar'
 
 class Header extends React.Component{
     constructor(props){
         super(props)
-        this.state = {navbar: "navbar-open"}
+        this.state = {navbar: "navbar-closed"}
         this.classChange = this.classChange.bind(this)
     }
 
@@ -14,6 +15,7 @@ class Header extends React.Component{
     };
 
     render(){
+        let nav = ((this.state.navbar) === "navbar-open") ? <Navbar /> : "" 
      return(
         <div className = "header-component">
             <div className = "header">
@@ -22,6 +24,7 @@ class Header extends React.Component{
                 <div className = "placeholder">placeholder</div>
             </div>
             
+            {nav}
         </div>
         )
     }
