@@ -1,0 +1,1 @@
+json.extract! cupcake, :name, :description, :price
